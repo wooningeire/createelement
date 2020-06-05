@@ -35,7 +35,7 @@ export default function createElement(elementSource="div", {
 	} else if (typeof elementSource === "function") { // constructor
 		element = new elementSource();
 	
-	} else if (elementSource instanceof HTMLElement) {
+	} else if (elementSource instanceof Element) {
 		element = elementSource;
 
 	} else {

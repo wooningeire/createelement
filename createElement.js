@@ -7,14 +7,14 @@
  * @param {string} [options.textContent=""] The text to append to the element.
  * @param {Iterable<string>} [options.classes=[]] The classes in the element's class list.
  * @param {object} [options.properties={}] Additional properties that will be set on the element.
- * @param {Iterable<string[]>} [options.attributes] A collection of argument lists to be passed to `setAttribute` (or `setAttributeNS` if a namespace is present).
+ * @param {Iterable<string[]>} [options.attributes] A collection of argument lists to be passed to `setAttribute` (or `setAttributeNS` if a namespace is provided in the argument list).
  * @param {Iterable<Node>} [options.children] The child nodes to be appeneded immediately to the element.
  * @param {Node} [options.parent=null] The node to which the element should be appended immediately. Leave nullish if no parent.
  * @param {object} [options.listeners={}] Key-value pairs that map an event type to a collection of argument lists that will be passed to `addEventListener`.
  * @param {function} [options.callback=null] A function to which the element will be passed, following the element's creation. Leave nullish if no callback.
  * @returns {Element} The new element.
  */
-export function createElement(elementSource="div", {
+export default function createElement(elementSource="div", {
 	context=document,
 	namespace="",
 	textContent="",
